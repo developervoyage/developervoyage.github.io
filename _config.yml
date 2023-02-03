@@ -22,7 +22,7 @@ title: Developer Voyage
 #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Follow a software developer learning in public
-baseurl: "/docs" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://developervoyage.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: DeveloperVoyage
 github_username:  developervoyage
@@ -34,6 +34,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
