@@ -24,7 +24,7 @@
   const cookieBox = document.getElementById("cookie-consent");
 
   function recordConsent() {
-    // Set cookie for 1 month, after which it expires automatically
+    // Set cookie for 30 days, after which it expires automatically
     document.cookie = "CookieBy=DeveloperVoyageGithubIo; max-age=" + 60 * 60 * 24 * 30;
     if (document.cookie) {
       cookieBox.classList.add("hide");
@@ -36,7 +36,7 @@
   }
 
   function learnMore() {
-    window.open("/disclaimer.html#cookies", "_self");
+    window.open("/disclaimer/#cookies", "_self");
   }
 
   document.cookie.indexOf("CookieBy=DeveloperVoyageGithubIo") != -1
