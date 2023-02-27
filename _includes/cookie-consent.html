@@ -1,27 +1,25 @@
-<div
-  id="cookie-consent"
-  class="cookie-consent"
-  aria-label="Cookie consent banner"
->
+<div id="cookie-consent" class="cookie-consent" aria-label="Cookie consent banner">
   This site uses cookies to control the display of this cookie consent banner
   and for Google Analytics.
-  <button
-    id="cookie-consent-dismiss"
-    class="cookie-consent-button"
-    onclick="recordConsent()"
-  >
+  <button id="cookie-consent-dismiss" class="cookie-consent-button" onclick="recordConsent()">
     OK
   </button>
-  <button
-    id="cookie-consent-learn-more"
-    class="cookie-consent-button"
-    onclick="learnMore()"
-  >
+  <button id="cookie-consent-learn-more" class="cookie-consent-button" onclick="learnMore()">
     Learn more
   </button>
 </div>
 <script>
   const cookieBox = document.getElementById("cookie-consent");
+
+  if (document.cookie.indexOf("CookieBy=DeveloperVoyageGithubIo") != -1 ||
+    window.doNotTrack === "1" ||
+    navigator.doNotTrack === "1" ||
+    navigator.doNotTrack === "yes" ||
+    navigator.msDoNotTrack === "1") {
+    cookieBox.classList.add("hide");
+  } else {
+    cookieBox.classList.remove("hide");
+  }
 
   function recordConsent() {
     // Set cookie for 30 days, after which it expires automatically
@@ -38,8 +36,4 @@
   function learnMore() {
     window.open("/disclaimer/#cookies", "_self");
   }
-
-  document.cookie.indexOf("CookieBy=DeveloperVoyageGithubIo") != -1
-    ? cookieBox.classList.add("hide")
-    : cookieBox.classList.remove("hide");
 </script>
